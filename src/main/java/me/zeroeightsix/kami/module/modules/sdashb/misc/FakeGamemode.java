@@ -46,10 +46,12 @@ public class FakeGamemode extends Module {
         }
     }
     public void onEnable() {
+        if (mc.player == null) { this.disable();return; }
         gameType = mc.playerController.getCurrentGameType();
     }
 
     public void onDisable() {
+        if (mc.player == null) return;
         mc.playerController.setGameType(gameType);
     }
 

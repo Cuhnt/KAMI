@@ -32,7 +32,7 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 import static me.zeroeightsix.kami.module.modules.combat.CrystalAura.getPlayerPos;
-import static me.zeroeightsix.kami.module.modules.player.Scaffold.faceVectorPacketInstant;
+import static me.zeroeightsix.kami.util.BlockInteractionHelper.*;
 
 /**
  * @author hub/blockparole
@@ -82,7 +82,7 @@ public class AutoWither extends Module {
     private Setting<Boolean> placeCloseToEnemy = register(Settings.b("Place close to enemy", false));
     private Setting<Boolean> fastMode = register(Settings.b("Disable after placing", true));
     private Setting<Boolean> debugMessages = register(Settings.b("Debug Messages", true));
-    private Setting<Boolean> nametag = register(Settings.b("Name Wither", false));
+    private Setting<Boolean> nametag = register(Settings.b("Nametag", true));
 
     private int swordSlot;
     private static boolean isSneaking;
